@@ -123,7 +123,7 @@ static void *SWITCH_THREAD_FUNC transcribe_thread(switch_thread_t *thread, void 
                     switch_buffer_zero(curl_recv_buffer);
                     status = curl_perform(curl_recv_buffer, asr_ctx->opt_api_key, asr_ctx->opt_model, chunk_fname, &globals);
                     if(status == SWITCH_STATUS_SUCCESS || globals.fl_shutdown || asr_ctx->fl_destroyed) { break; }
-                    switch_yield(1000);
+                    switch_yield(100000);
                 }
 
                 http_recv_len = switch_buffer_peek_zerocopy(curl_recv_buffer, &http_response_ptr);
