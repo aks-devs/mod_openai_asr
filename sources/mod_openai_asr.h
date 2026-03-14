@@ -15,7 +15,7 @@
  * License.
  *
  * Module Contributor(s):
- *  Konstantin Alexandrin <akscfx@gmail.com>
+ *  aks  https://akstel.org
  *
  *
  */

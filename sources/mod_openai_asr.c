@@ -15,14 +15,12 @@
  * License.
  *
  * Module Contributor(s):
- *  Konstantin Alexandrin <akscfx@gmail.com>
+ *  aks  https://akstel.org
  *
  *
  * OpenAI Speech-To-Text service for the Freeswitch.
  * https://platform.openai.com/docs/guides/speech-to-text
  *
- * Development respository:
- * https://github.com/akscf/mod_openai_asr
  *
  */
 #include "mod_openai_asr.h"
@@ -698,7 +696,9 @@ SWITCH_MODULE_LOAD_FUNCTION(mod_openai_asr_load) {
     asr_interface->asr_load_grammar = asr_load_grammar;
     asr_interface->asr_unload_grammar = asr_unload_grammar;
 
-    switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_NOTICE, "OpenAI-ASR (%s)\n", MOD_VERSION);
+    switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_NOTICE, "OpenAI Speech-to-Text (%s)\n", MOD_VERSION);
+    switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_NOTICE, "(C)2025 akstel.org\n");
+
 out:
     if(xml) {
         switch_xml_free(xml);
